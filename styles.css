@@ -1,0 +1,381 @@
+/* definição de cores */
+/* COLOR PALLETE */
+:root {
+    --primary: #4a3e1f;
+    --secondary: #756231;
+    --success: #9d8442;
+    --info: #cfb566;
+    --warning: #f3cd84;
+    --danger: #b76f44;
+    --light: #f2f0df;
+    --dark: #2b2516;
+
+    --background: #FFDD99;
+    --background-variation: #f4f4f4;
+    --background-variation-b: #efefef;
+
+  }
+
+/*DEFAULTS*/
+html {
+    font-size: 20px;
+}
+body,
+ul,
+li {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+}
+a {
+    font-size: 1.2rem;
+}
+
+a{
+    color: #494F20;
+}
+a:hover {
+    color: #494F20;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+p {
+    font-size: 0.9rem;
+}
+p a {
+    font-size: 0.9rem;
+}
+
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 10px;
+    font-size: 1rem;
+    transition: 0.2s;
+    text-align: start;
+}
+
+table{
+    background-color: white;
+    width: 100%;
+}
+
+tr:nth-child(odd){
+    background-color: #eee;
+}
+
+/* th:nth-child(1){
+    width: 50%;
+} */
+
+tr:hover {
+    background: rgb(200, 199, 199);
+}
+
+/* responsive changes */
+@media (max-width: 1201px) {
+    td {
+        font-size: 0.7rem;
+    }
+    @media (min-width: 768px) {
+        .container {
+            max-width: 95%!important;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    td {
+        font-size: 0.5rem;
+    }
+}
+@media (max-width: 768px) {
+    html {
+        font-size: 17px;
+    }
+    
+    table,
+    th,
+    td {
+        font-size: 0.7rem;
+    }
+}
+
+/*  HELPERS */
+.background-contrast {
+    background-color: var(--background-variation)!important;
+}
+.background-variation-b {
+    background-color: var(--background-variation-b)!important;
+}
+.small {
+    font-size: 0.8rem!important;
+    font-style: italic!important;
+}
+.width-100 {
+    width: 100%!important;
+}
+.width-80 {
+    width: 80%!important;
+}
+.width-50 {
+    width: 50%!important;
+}
+
+.max-overflow {
+    max-width: 200px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.max-overflow:hover {
+    overflow: none;
+    white-space:inherit;
+}
+
+@media (max-width: 768px) {
+    .max-overflow {
+        max-width: 70px;
+    }
+}
+
+/* MAIN */
+    /* HEADER */
+    .title {
+        font-size: 22px;
+        padding: 15px;
+    }
+    .title span {
+        font-size: 0.8rem;
+        font-style: italic;
+    }
+
+    .menu {
+        background-color: #F4F4F4;
+        width: 100%;
+        padding: 15px 15px;
+        display: flex;
+        justify-content: center;
+    }
+    .menu a {
+        user-select: none;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        line-height: 48px;
+        height: 48px;
+        padding: 0 16px;
+        text-align: left;
+        text-decoration: none;
+        max-width: 100%;
+        position: relative;
+    }
+    .menu a.active {
+        text-decoration: underline;
+    }
+
+    /* CONTENT */
+    #main-content {
+        padding: 30px 0;
+    }
+
+    .section-content-style {
+        background-color: var(--background-variation);
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+
+    .banner {
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .banner img {
+        margin: 0px 0px 0px 0px;
+        width: 100%;
+    }
+
+    /*FORMS*/
+    /* default input styles */
+    .input-style {
+        border-radius: 5px;
+        border: 1px solid var(--primary);
+        margin: 2px 5px;
+        padding: 10px;
+        font-size: 1rem;
+    }
+    /* main form wrapper */
+    .newItem {
+        border-radius: 15px;
+        padding: 30px 0;
+        color: white;
+        display: flex;
+        justify-content: center;
+    }
+    /*perguntar sobre o display table em aula*/
+    .newItem:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    #newInput {
+        margin-left: 0;
+    }
+    /* styles moved to input-style */
+    #newQuantity {
+    }
+    #newPrice {
+    }
+
+    /*responsive form changes*/
+    /* will break form to lines when 768px or less */
+    @media (max-width: 768px) {
+        .input-style {
+            margin: 2px 0;
+        }
+        .newItem {
+            flex-direction: column;
+        }
+        
+    }
+    
+    /* BUTTONS */
+    .addBtn {
+        padding: 9px 10px;
+        background-color: rgb(35, 32, 24);
+        color: white;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 2px;
+    }
+
+    .addBtn:hover {
+        background-color: #2ab53a;
+        color: white;
+    }
+
+    .items {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .close {
+        float: none!important;
+    }
+
+    .close:hover {
+        color: #f44336;
+        font-weight: bolder;
+    }
+
+    .uggly-spinner {
+        border: 1px solid var(--primary);
+        width: 30px;
+        height: 30px;
+    }
+
+    .wrap-loader {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
+    }
+    .wrap-loader.active {
+        display: flex;
+    }
+    
+    /* sobrescrevendo cores do bootstrap */
+    .btn-primary {
+        background-color: var(--primary) !important;
+        border-color: var(--primary) !important;
+    }
+
+    .btn-primary:focus {
+        background-color: var(--primary) !important;
+        border-color: var(--primary) !important;
+        box-shadow: 0 0 0 0.09rem var(--info)!important;
+    }
+
+
+
+    /* FOOTER */
+    .footer-content {
+        font-size: 16px;
+        padding: 1rem 0;;
+    }
+    .footer-content a {
+        font-size: 16px;
+    }
+
+
+    /* OTHERS */
+    .wrap-controls {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .wrap-controls .button-control {
+        font-size: 12px;
+    }
+
+
+
+/* ANIMATIONS */
+.animation-fade-in {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animation-rotate {
+    animation: rotate 2s linear infinite; 
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+  #map {
+    height: 500px;
+    width: 100%;
+    margin-top: 20px;
+}

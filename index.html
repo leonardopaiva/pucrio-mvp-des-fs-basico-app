@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <title>MVP - Pos Grad Puc Rio - Leonardo Paiva - Desenvolvimento Full stack Basico </title>
+
+    <!-- google maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initGoogleMaps&key=YOUR_API_KEY&libraries=places&loading=async" async defer ></script>
+</head>
+
+<body>
+    <!-- todo: create header component -->
+    <header>
+
+        <h1 class="title">
+            <a href="#home" class="js-register-navigation" data-targetmodule="HomeModule" data-url="#home" >
+                <img src="img/logo.png" alt="" width="120px">
+            </a>
+        </h1>
+
+        <nav class="menu">
+            <a 
+                href="#home" 
+                class="js-register-navigation" 
+                data-targetmodule="HomeModule" 
+                data-url="#home"
+                data-default="true">
+                Home
+            </a>
+            <a 
+                href="#doctors" 
+                class="js-register-navigation" 
+                data-targetmodule="DoctorModule"
+                data-url="#doctors">
+                Médicos
+            </a>
+            <a 
+                href="#maps" 
+                class="js-register-navigation" 
+                data-targetmodule="EventModule" 
+                data-targetview="Map"
+                data-url="#maps">
+                Mapa
+            </a>
+            <a 
+                href="#events" 
+                class="js-register-navigation btn btn-primary ml-4" 
+                data-targetmodule="EventModule" 
+                data-targetview="Create"
+                data-url="#events">
+                Criar Consultas
+            </a>
+            <!-- <div class="wrapper-sub-menu">
+                <a href="#" class="header-sub-menu">Cadastros</a>
+                <div class="sub-menu">
+                    <a href="#doctors" class="js-register-navigation" data-targetmodule="DoctorModule">Doctors</a>
+                    <a href="#specialties" class="js-register-navigation" data-targetmodule="SpecialtyModule">Specialties</a>
+                </div>
+            </div> -->
+        </nav>
+
+
+        
+    </header>
+
+    <section id="main-content" data-targetmodule=""></section>
+
+    <footer class="footer">
+       <div class="container">
+            <div class="col-md-12 pl-0">
+                <div class="footer-content">
+                    <div>MVP <a href="https://especializacao.ccec.puc-rio.br/especializacao/desenvolvimento-full-stack" target="_blank">Puc Rio - Pós Graduação Desenvolvimento Full Stack</a></div>
+                    <div>Leonardo Souza Paiva - <a href="https://leonardopaiva.com" target="_blank">www.leonardopaiva.com</a></div>
+                    <div>© Copyright 2024. All Rights Reserved by </div>
+                </div>
+            </div>
+       </div>
+    </footer>
+
+    <div class="wrap-controls">
+        <button id="decrease" class="button-control">- Fonte</button>
+        <button id="increase" class="button-control">+ Fonte</button>
+    </div>
+
+
+    <!-- <script src="old-scripts.js"></script> -->
+    <script src="body-size.js"></script>
+    
+    <script src="scripts/app.js"></script>
+    <script src="scripts/configs.js"></script>
+    <script src="scripts/helpers/util.js"></script>
+    <script src="scripts/routes.controller.js"></script>
+    <script src="scripts/modules/home.module.js"></script>
+    <script src="scripts/modules/doctor.module.js"></script>
+    <script src="scripts/modules/specialty.module.js"></script>
+    <script src="scripts/modules/event.module.js"></script>
+    <!-- lembrar de adicionar um document.ready para o App.init() -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            //initialize the main App function
+            App.init();
+        });
+        //A função de callback initGoogleMaps é definida na url de chamada do script
+        // "js?callback=initGoogleMaps&key" ela irá garantir que o mapa seja inicializado
+        // quando 'google' existir
+        //caso contrário o mapa nao pode ser iniciado no primeiro carregamento
+        //todo: reavaliar inicialização do app estar dependendo do 
+        //callback do googlemaps
+        function initGoogleMaps() {
+            if (window.location.hash === '#maps')
+                App.EventModule.initGoogleMaps();
+        }
+    </script>
+    
+</body>
+
+</html>
+
+
