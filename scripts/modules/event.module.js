@@ -304,7 +304,7 @@ class EventModule {
             }
 
             let addressesLength = addresses.length - 1
-            if (addressesLength <= 0) return console.log('No addresses found!');
+            if (addressesLength < 0) return console.log('No addresses found!');
 
             // Map initialization center to Brazil
             App.EventModule._map = new google.maps.Map(document.getElementById('map'), {

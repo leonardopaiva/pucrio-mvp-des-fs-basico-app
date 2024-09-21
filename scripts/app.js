@@ -5,7 +5,7 @@
 // https://github.com/simplesingleton/SSP-simple-singleton-pattern 
 // "initAllModules", is responsible for starting all the App modules that are registered using the singleton.
 // SSP should be considered a design pattern, the only function I used was a modified version by me
-// "initAllModules" . I say this because the project has a requirement not to use libs and SSP should not be considered a lib
+// "initAllModules" . I say this because the project has a requirement not to use libs or framerworks and SSP should not be considered a lib
 // instead is an idea of ​​structuring the project
 
 // Examples, when called 'App.init()', every init function of each module is called, App.Doctor.init(), App.Event.init(), 
