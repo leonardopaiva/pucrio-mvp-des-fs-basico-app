@@ -64,5 +64,5 @@ This is the first MVP of the Full Stack Development Postgraduate Program at PUCR
 
 **Student**: Leonardo Souza Paiva  
 **Portfolio**: [www.leonardopaiva.com](http://www.leonardopaiva.com)  
-**API URL pucrio-mvp-des-fs-basico-api**: [API URL](https://github.com/leonardopaiva/pucrio-mvp-des-fs-basico-api)
+**API URL pucrio-mvp-des-fs-basico-api**: [API URL](https://github.com/leonardopaiva/pucrio-mvp-des-fs-basico-api)  
 **Video for mvp avaliation**: [Video for mvp avaliation](https://www.youtube.com/watch?v=J7gtelhYxxo)
