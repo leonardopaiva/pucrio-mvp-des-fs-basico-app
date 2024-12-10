@@ -1,13 +1,12 @@
-# Meu Front
+# MVP - Puc Rio - Full stack development Basic
 
-Este pequeno projeto faz parte do material diático da Disciplina **Desenvolvimento Full Stack Básico** 
+This is the first MVP of the Full Stack Development Postgraduate Program at PUCRS University, Rio de Janeiro.
 
-O objetivo aqui é ilutsrar o conteúdo apresentado na terceira aula.
 
 ---
-## Como executar
+## How to Run
 
-Basta fazer o download do projeto e abrir o arquivo index.html no seu browser.
+Simply download the project and open the index.html file in your browser.
 
 ## About Project
 
